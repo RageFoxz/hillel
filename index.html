@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>les2</title>
+</head>
+<body>
+    <script>
+        false && true || true; // true, По приоритету первым && ==> false && true = false ==> false || true = true
+        false && (true || true); // false, По приоритету первым (), true || true = true ==> false && true = false
+        +'40' + +'2'; // 42, преобразование
+        '2' + 3 ** 2; // 11, По приоритету первым возведение ==> преобразование и сложение
+        3 ** 2 / 3; // 3, По приоритету первым возведение ==> деление
+        3 ** (9 / 3); // 27, По приоритету первым группировка ==> возведение
+        '10' + (5 === 6); // 10false, 5===6 - это false ==> конкатенация
+        '10' - 5 === 6; // false, Преобразование, 10-5=5, 5 != 6
+        undefined + 1;  // NaN, результат undefined + number = NaN
+        (+null == false) < 1; // false, (+null == false) - это true, true = 1, 1 не меньше 1
+        (+null == false) < 1 ** 5; // false, аналогично, 1 ** 5 = 1 
+       
+       
+       
+        var number = 5; // 5, number не перезаписывалась
+        2 * ++number; 
+        2 * number--; 
+        console.log(number);
+       
+       
+       </script>
+</body>
+</html>
